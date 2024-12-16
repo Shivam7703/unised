@@ -4357,7 +4357,6 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
   }
   
   .ui-thumbnails {
-	position: absolute;
 	width: 100%;
 	bottom: 0;
 	left: 0;
