@@ -71,6 +71,9 @@ body {
 p, li{
 	font-family: "Noto Sans", serif;
 }
+p{
+	font-size: 15px;
+}
 .brdrbxx {
 	border: 1px solid #2b79ed;
 	padding: 5px 10px 15px 10px;
