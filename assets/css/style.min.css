@@ -135,7 +135,9 @@ video {
 	background-size: cover;
 	display: table-cell;
 	vertical-align: middle;
-	width: 100%;
+	min-width: 100%;
+	object-fit: cover;
+	height: 100%;
 }
 
 :focus-visible {
