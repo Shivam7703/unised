@@ -5302,7 +5302,9 @@ a:hover{ text-decoration: none; }
 		height: 11px;
 		width: 30px;
    }
-}
+.hid{
+	display: none!important;
+}}
 
 
 /* flagship detail  */
