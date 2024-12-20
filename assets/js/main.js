@@ -3147,10 +3147,26 @@
 
 })(jQuery);
 
-function scrollToTarget() {
-  document.getElementById('target').scrollIntoView({
-	behavior: 'smooth'
-  });
+function initFAQ() {
+    const questions = document.querySelectorAll('.question');
+    
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+			console.log("wrking");
+            // If clicking on an already active item, remove the active class
+            if (question.parentNode.classList.contains('active')) {
+                question.parentNode.classList.remove('active');
+            } else {
+                // Remove 'active' class from all question parents first
+                questions.forEach(q => {
+                    q.parentNode.classList.remove('active');
+                });
+                
+                // Add 'active' class to the clicked question's parent
+                question.parentNode.classList.add('active');
+            }
+        });
+    });
 }
 
-scrollToTarget();
+initFAQ();
