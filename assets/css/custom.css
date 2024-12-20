@@ -68,7 +68,7 @@ body {
 	padding-right: 0px !important;
 }
 
-p, li{
+p, li, .faq-item .question{
 	font-family: "Noto Sans", serif;
 }
 p{
@@ -400,6 +400,7 @@ header .navbar-brand img {
 	border-radius: 6px;
 	box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.166);
 	margin-bottom: 20px;
+	padding: 1.6rem;
 	}
 	
 	.faq{
@@ -422,6 +423,8 @@ header .navbar-brand img {
 			font-family: "Outfit", sans-serif;
 			overflow: hidden; 
 			transition: max-height 1s ;
+			font-family: 'Montserrat', sans-serif;
+
 		  }
 		  
 		  .faq-item.active .answer {
