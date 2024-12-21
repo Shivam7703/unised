@@ -1,3 +1,13 @@
+
+// Remove the preloader after the page loads
+window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.body.classList.add("loaded");
+    }, 900); 
+  });
+
+
+
 (function ($) {
 	"use strict";
 	var menuBreakPoint = 991;
