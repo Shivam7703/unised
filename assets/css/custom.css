@@ -2552,10 +2552,10 @@ border-radius: 5px;}
 	padding: 13px 15px;
 }
 
-.flagshipcard>.imageContainer>img {
+.flagshipcard .imageContainer img {
 	height: auto !important;
 	width: 100% !important;
-	min-height: 280px;
+	min-height: 260px;
 	object-fit: cover;
 }
 
