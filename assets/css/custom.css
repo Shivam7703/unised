@@ -2817,9 +2817,10 @@ color: #7e7e7e;
 
 .icon-rect-three-line img {
 	width: 150px !important;
-	height: 50px;
+	height: 100%;
+	object-fit: cover;
 	overflow: hidden;
-	transition: all 05s;
+	transition: all 0.6s;
 }
 
 .icon-rect-three-line:hover img {
@@ -4020,6 +4021,10 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
     .timeline::after {
       left: 31px;
     }
+
+	.bg-blue-news-section::after {
+	display: none;
+	}
 
     .timeline-container {
       width: 100%;
