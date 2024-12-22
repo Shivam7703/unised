@@ -3179,4 +3179,24 @@ function initFAQ() {
     });
 }
 
+// Arrays for years and milestones
+const years = Array.from(document.querySelectorAll('.year')); // Convert NodeList to Array
+const milestones = Array.from(document.querySelectorAll('[id^="mile"]')); // Convert NodeList to Array
+
+// Function to update visibility and active classes
+function updateMilestone(index) {
+  // Hide all milestones and remove active class from years
+  milestones.forEach((milestone) => milestone.classList.add('hidden'));
+  years.forEach((year) => year.classList.remove('active'));
+
+  // Show the selected milestone and highlight the clicked year
+  milestones[index].classList.remove('hidden');
+  years[index].classList.add('active');
+}
+
+// Add event listeners to years
+years.forEach((year, index) => {
+  year.addEventListener('click', () => updateMilestone(index));
+});
+
 initFAQ();

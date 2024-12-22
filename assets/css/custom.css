@@ -4061,6 +4061,10 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
     opacity: 0;
   }
 
+  .hidden{
+	display: none !important;
+  }
+
 
   /* event */
 
@@ -4538,7 +4542,57 @@ p{
 }
 
 
+/* milestone */
+.milestone{
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	gap: 33px;
+	overflow: auto;
+	padding: 15px;
+	margin-bottom: calc(1.3vw + 2vh)!important;
 
+	.arro{
+		position: absolute;
+		height: 0;
+		width: 100%!important;
+		min-width: 660px;
+		z-index: 0;
+		border: 2px dashed orange;
+		left: 0;
+		top: 50%;
+	}
+}
+.year{
+	min-width: 70px;
+	font-size: 1.4rem;
+	height: 70px;
+	z-index: 2;
+	cursor: pointer;
+	border-radius: 50%;
+	text-align: center;
+	background:linear-gradient(0deg, #0E1D6C, #5471ff);
+	padding-top: 24px;
+	color: white;
+	font-family: "Libre Baskerville", serif;
+	transition: all 0.4s ease-in;
+}
+.year:hover ,.year.active{
+	background:linear-gradient(0deg, #fe7200, #ffa851);
+	transform: scale(1.07);
+	box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.516);
+
+}
+
+.story{
+	padding: 0 calc(3vw + 2vh);
+	p{
+		font-size: 1.1rem;
+		line-height: 1.4;
+		font-family: "Libre Baskerville", serif;
+		margin-bottom: 15px!important;
+	}
+}
 
 /* new section 
  */
@@ -4585,9 +4639,17 @@ p{
 	  -o-object-position: center center;
 		 object-position: center center;
 	}
+	
 	}
 
   @media (max-width: 770px) {
+	.year{
+		min-width: 50px;
+		font-size: 1.2rem;
+		height: 50px;
+		padding-top: 14px;
+	}
+
 
 	.map_ok .map-container{
 	  .fl{
