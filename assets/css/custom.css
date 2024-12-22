@@ -3136,7 +3136,8 @@ color: #7e7e7e;
     content: "";
     width: 30px;
     height: 30px;
-    background-color: #eff1f3;
+    background-color: #1378be;
+	z-index: 20;
     right: -16px;	
     top: 20px;
     transform: rotate(45deg);
@@ -4315,17 +4316,35 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
   position: relative;
   display: inline-block;
 }
-.map_ok .map-container img {
+.map_ok .map-container{ img {
   width: 100%;
 }
-.map_ok .map-container .point {
-  cursor: pointer;
+.fl{
+	cursor: pointer;
+	display: flex;
+justify-content: center;
+width: 117px;
+align-items: center;
   position: absolute;
-  width: 1.2rem;
-  height: 1.2rem;
+p{
+	font-size: 10px;
+	color: rgba(0, 0, 0, 0.434); font-weight: 700;
+	line-height: 1.2; padding: 5px; background: white;
+	border: 1px solid rgba(0, 0, 0, 0.402);
+}
+.loc{
+	display: flex; flex-direction: column;
+	align-items: center;
+}
+}
+}
+.map_ok .map-container .point {
+	width: 1.7rem;
+  height: 0.6rem;
   background-color: #00acc1;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+  border-radius: 50% ;
+  margin-top: -20px;
+   transition: all 0.3s ease;
   will-change: transform, box-shadow;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 rgba(0, 172, 193, 0.4);
@@ -4339,93 +4358,94 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
 }
 /* Northern States */
 .map_ok .map-container .kashmir {
-  	top: 15%;
-    left: 28%;
+  	top: 12%;
+    left: 26%;
+	z-index: 10;
 }
 
 .map_ok .map-container .ladakh {
 	top: 12%;
-    left: 35%;
+    left: 37%;
 }
 
-.map_ok .map-container .Delhi {
-    top: 29%;
-    left: 35%;
+.map_ok .map-container .delhi {
+    top: 24%;
+    left: 30%;
 }
 
-.map_ok .map-container .Uttrakhand {
-    top: 22%;
-    left: 38%;
+.map_ok .map-container .uttrakhand {
+    top: 20%;
+    left: 40%;
 }
 
 /* Western States */
-.map_ok .map-container .Gujarat {
-    top: 46%;
-    left: 16%;
+.map_ok .map-container .gujarat {
+    top: 40%;
+    left: 10%;
 }
 
-.map_ok .map-container .Rajisthan {
-    top: 35%;
-    left: 17%;
+.map_ok .map-container .rajasthan {
+    top: 30%;
+    left: 13%;
 }
 
 .map_ok .map-container .maharashtra {
-    top: 59%;
-    left: 26%;
+    top: 46%;
+    left: 20%;
 }
 
 .map_ok .map-container .goa {
-    top: 69%;
-    left: 26%;
+    top: 56%;
+    left: 15%;
 }
 
 /* Central States */
 .map_ok .map-container .mp {
-    top: 45%;
-    left: 38%;
+    top: 34%;
+    left: 30%;
 }
 
 .map_ok .map-container .chhattishgarh {
-    top: 48%;
-    left: 55%;
+    top: 45%;
+    left: 42%;
 }
 
 /* Eastern States */
-.map_ok .map-container .Bihar {
-    top: 40%;
+.map_ok .map-container .bihar {
+    top: 34%;
     left: 60%;
 }
 
 .map_ok .map-container .jharkhand {
-    top: 45%;
+    top: 42%;
     left: 62%;
 }
 
 .map_ok .map-container .odisha {
-    top: 55%;
-    left: 58%;
+    top: 45%;
+    left: 57%;
 
 }
 
 /* Southern States */
 .map_ok .map-container .ap {
-    top: 78%;
-    left: 42%;
+	top:58%;
+    left: 36%;
 }
 
 .map_ok .map-container .telangana {
-    top: 65%;
-    left: 39%;
+    top: 52%;
+    left: 30%;
 
 }
 
 .map_ok .map-container .pondicherry {
-    top: 87%;
-    left: 41%;
+    top: 70%;
+    left: 36%;
 }
 
 /* Northeastern States */
-.map_ok .map-container .Assam {
+.map_ok .map-container .assam {
     top: 35%;
     left: 82%;
 }
@@ -4455,7 +4475,7 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
 
 /* Northern Plain */
 .map_ok .map-container .uttar {
-    top: 38%;
+    top: 32%;
     left: 49%;	
 }
 
@@ -4519,7 +4539,18 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
 	  -o-object-position: center center;
 		 object-position: center center;
 	}
-  }
+	}
+
+  @media (max-width: 770px) {
+
+	.map_ok .map-container{
+	  .fl{
+	  width: 30px;
+		position: absolute;
+	 p{
+		display: none!important;
+	 }
+  }}}
   
   .ui-thumbnails {
 	width: 100%;
