@@ -4375,6 +4375,15 @@ p{
 }
 }
 }
+
+.fl:hover {
+	z-index: 30;
+	p{
+		display: block!important;
+		color: black!important;
+		transform: scale(1.5);
+	}
+}
 .map_ok .map-container .point {
 	width: 1.7rem;
   height: 0.6rem;
@@ -4582,10 +4591,10 @@ p{
 
 	.map_ok .map-container{
 	  .fl{
-	  width: 30px;
+	max-width:max-content!important ;
 		position: absolute;
 	 p{
-		display: none!important;
+		display: none;
 	 }
   }}}
   
