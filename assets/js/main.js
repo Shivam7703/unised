@@ -3199,4 +3199,9 @@ years.forEach((year, index) => {
   year.addEventListener('click', () => updateMilestone(index));
 });
 
+function stopMarquee() {
+	const marquee = document.getElementById("myMarquee");
+	marquee.stop(); // Stops the marquee
+}
+
 initFAQ();
