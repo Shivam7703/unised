@@ -3199,9 +3199,24 @@ years.forEach((year, index) => {
   year.addEventListener('click', () => updateMilestone(index));
 });
 
-function stopMarquee() {
-	const marquee = document.getElementById("myMarquee");
-	marquee.stop(); // Stops the marquee
+
+
+const states = Array.from(document.querySelectorAll('.fl')); // Convert NodeList to Array
+const programs = Array.from(document.querySelectorAll('[id^="program"]')); // Convert NodeList to Array
+
+// Function to update visibility and active classes
+function updateProgram(index) {
+  // Hide all milestones and remove active class from years
+  programs.forEach((program) => program.classList.add('hidden'));
+
+  // Show the selected milestone and highlight the clicked year
+  programs[index].classList.remove('hidden');
 }
+
+// Add event listeners to years
+states.forEach((state, index) => {
+  state.addEventListener('click', () => updateProgram(index));
+});
+
 
 initFAQ();

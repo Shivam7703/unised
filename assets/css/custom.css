@@ -3620,6 +3620,23 @@ margin-right: 10px;
 
 map  */
 
+.map-text{
+	font-family: "Libre Baskerville", serif;
+font-size: 45px;
+border-bottom: 2px solid orange;
+line-height: 1.3;
+border-width: 88%;
+margin-bottom: calc(1.5vw + 1vh)!important;
+}
+.map-p{
+	margin-bottom: 0!important;
+	font-size: 17px;
+	font-family: 'Nunito', sans-serif;
+	text-align: justify;
+	font-weight:500;
+	line-height: 1.3!important;
+}
+
 .achievement_container{
 	padding: 50px 43px;
     max-width: 1200px;
@@ -4383,34 +4400,14 @@ background: linear-gradient(190deg, #F67B50 0%, #0f4667 100%) !important;
 	cursor: pointer;
 	display: flex;
 justify-content: center;
-width: 117px;
+width: 80px;
 align-items: center;
   position: absolute;
-p{
-	font-size: 10px;
-	color: rgba(0, 0, 0, 0.434); font-weight: 700;
-	line-height: 1.2; padding: 5px; background: white;
-	border: 1px solid rgba(0, 0, 0, 0.402);
-}
-.loc{
-	display: flex; flex-direction: column;
-	align-items: center;
-}
-}
-}
 
-.fl:hover {
-	z-index: 30;
-	p{
-		display: block!important;
-		color: black!important;
-		transform: scale(1.5);
-	}
-}
-.map_ok .map-container .point {
+  .point {
 	width: 1.7rem;
   height: 0.6rem;
-  background-color: #00acc1;
+  background-color: #296CB6;
   border-radius: 50% ;
   margin-top: -20px;
    transition: all 0.3s ease;
@@ -4419,31 +4416,60 @@ p{
   box-shadow: 0 0 0 rgba(0, 172, 193, 0.4);
   animation: pulse 3s infinite;
 }
-.map_ok .map-container .point:hover {
-	background-color: #FF9933;
-  animation: none;
-  transform: translate(-50%, -50%) scale3D(1.15, 1.15, 1);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+p{
+	width: max-content;
+	font-size: 8px;
+	margin-left: -10px;
+	color: rgba(0, 0, 0, 0.434); font-weight: 700;
+	line-height: 1.2; padding: 4px; background: white;
+	border: 1px solid rgba(0, 0, 0, 0.402);
 }
+.loc{
+	display: flex; flex-direction: column;
+	align-items: center;
+	h5{
+		color: rgb(255, 77, 0);
+		margin-left: -25px;
+	}
+}
+}
+}
+
+.fl:hover {
+	z-index: 30;
+	.point {
+		background-color: #FF9933!important;
+	  animation: none;
+	  transform: translate(-50%, -50%) scale3D(1.15, 1.15, 1);
+	  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	}
+	p{
+		display: block!important;
+		color: black!important;
+		transform: scale(1.5);
+	}
+	
+}
+
 /* Northern States */
 .map_ok .map-container .kashmir {
-  	top: 12%;
-    left: 26%;
+  	top: 5%;
+    left: 24%;
 	z-index: 10;
 }
 
 .map_ok .map-container .ladakh {
-	top: 12%;
+	top: 0.4%;
     left: 37%;
 }
 
 .map_ok .map-container .delhi {
-    top: 24%;
-    left: 30%;
+    top: 23%;
+    left: 29%;
 }
 
 .map_ok .map-container .uttrakhand {
-    top: 20%;
+    top: 18%;
     left: 40%;
 }
 
@@ -4454,69 +4480,69 @@ p{
 }
 
 .map_ok .map-container .rajasthan {
-    top: 30%;
-    left: 13%;
+    top: 28%;
+    left: 16%;
 }
 
 .map_ok .map-container .maharashtra {
-    top: 46%;
-    left: 20%;
+    top: 56%;
+    left: 22%;
 }
 
 .map_ok .map-container .goa {
-    top: 56%;
-    left: 15%;
+    top: 66%;
+    left: 16%;
 }
 
 /* Central States */
 .map_ok .map-container .mp {
-    top: 34%;
-    left: 30%;
+    top: 39%;
+    left: 35%;
 }
 
 .map_ok .map-container .chhattishgarh {
-    top: 45%;
-    left: 42%;
+    top: 44%;
+    left: 52%;
 }
 
 /* Eastern States */
 .map_ok .map-container .bihar {
-    top: 34%;
+    top: 30%;
     left: 60%;
 }
 
 .map_ok .map-container .jharkhand {
-    top: 42%;
-    left: 62%;
+    top: 38%;
+    left: 60%;
 }
 
 .map_ok .map-container .odisha {
-    top: 45%;
-    left: 57%;
+    top: 49%;
+    left: 58%;
 
 }
 
 /* Southern States */
 .map_ok .map-container .ap {
-	top:58%;
-    left: 36%;
+	top: 70%;
+    left: 41%;
 }
 
 .map_ok .map-container .telangana {
-    top: 52%;
-    left: 30%;
+    top: 58%;
+    left: 39%;
 
 }
 
 .map_ok .map-container .pondicherry {
-    top: 70%;
-    left: 36%;
+    top: 84%;
+    left: 42%;
 }
 
 /* Northeastern States */
 .map_ok .map-container .assam {
-    top: 35%;
-    left: 82%;
+    top: 28%;
+    left: 85%;
 }
 
 .map_ok .map-container .meghalaya {
@@ -4525,27 +4551,27 @@ p{
 }
 
 .map_ok .map-container .manipur {
-    top: 42%;
-    left: 81%;
+    top: 38%;
+    left: 90%;
 
 }
 
 .map_ok .map-container .nagaland {
-    top: 36%;
-    left: 85%;	
+    top: 32%;
+    left: 90%;	
 
 }
 
 .map_ok .map-container .arunachal {
-    top: 32%;
-    left: 77%;
+    top: 22%;
+    left: 89%;
 
 }
 
 /* Northern Plain */
 .map_ok .map-container .uttar {
-    top: 32%;
-    left: 49%;	
+    top: 28%;
+    left: 45%;	
 }
 
 @keyframes pulse {
@@ -4669,6 +4695,13 @@ p{
 		padding-top: 14px;
 	}
 
+	.map-text{
+	font-size: 29px;
+	border-width: 80%;
+	}
+	.map-p{
+		font-size: 14px;
+		}
 
 	.map_ok .map-container{
 	  .fl{
