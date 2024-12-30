@@ -5449,6 +5449,29 @@ a:hover{ text-decoration: none; }
 	opacity: 0.8;
 }
 
+/* Default style for the pagination dots */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc; /* Default dot color */
+    border-radius: 50%;
+    margin: 0 5px; /* Space between dots */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active dot style */
+.swiper-pagination-bullet-active {
+    background-color: #007bff; /* Color for the active dot */
+    transform: scale(1.2); /* Slightly enlarge the active dot */
+}
+
+/* Hover effect for dots */
+.swiper-pagination-bullet:hover {
+    background-color: #555; /* Change color on hover */
+    cursor: pointer;
+}
+
+
 .blog-slider__img img {
 	width: 100%;
 	height: 100%;
