@@ -1,9 +1,28 @@
 
 // Remove the preloader after the page loads
+var pop = document.getElementById("pop");
+var pop2 = document.getElementById("pop2");
+var pop3 = document.getElementById("pop3");
+
+
 window.addEventListener("load", function () {
     setTimeout(function () {
       document.body.classList.add("loaded");
     }, 900); 
+
+	setTimeout(function () {
+		pop.style.display = "none";
+		pop2.classList.remove("hidden");
+	  }, 10000); 
+
+	  setTimeout(function () {
+		pop2.classList.add("hidden");
+		pop3.classList.remove("hidden");
+	  }, 20000); 
+
+	  setTimeout(function () {
+		pop3.classList.add("hidden");
+	  }, 30000); 
   });
 
 
