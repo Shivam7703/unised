@@ -37,46 +37,37 @@
 
 <style>
  
-  #pop2 , #pop3{
-    position: fixed;
-    animation: scaleout 5s ease-in-out ; /* Add space for better readability */
-    bottom: 10px;
-  right: 10px;
-  z-index: 120;
-  }
-
-  @keyframes scaleout {
-    0% {
-   bottom: -400px; /* Add semicolon for consistency */
-  }
-  60% {
-   bottom: -400px; /* Add semicolon for consistency */
-  }
-
-  100% {
-    bottom: 10px; /* Add semicolon for consistency */
-  }
-}
-
-.loaded #pop {
+ .loaded #pop, #pop2, #pop3 {
   position: fixed;
-    bottom: 10px;
+  bottom: 10px;
   right: 10px;
   z-index: 120;
-  animation: slide 3s ease-in-out ; /* Add space for better readability */
 }
 
-@keyframes slide {
+@keyframes slideIn {
   0% {
-   right: -1100px; /* Add semicolon for consistency */
+    right: -1100px;
   }
-
   100% {
-    right: 10px; /* Add semicolon for consistency */
+    right: 10px;
+  }
+}
+.sliIn {
+  animation: slideIn 2s ease-in-out;}
+
+.sliOut {
+  animation: slideOut 2s ease-in-out; 
+}
+
+@keyframes slideOut {
+  0% {
+    right: 10px;
+  }
+  100% {
+    right: -1100px;
   }
 }
 
- 
 
 
   </style>
@@ -507,7 +498,7 @@
     </div>
   </footer>
 
-  <div id="pop" class="box-shadow border-radius-8px" style=" width: 80vw; padding: 0.9rem; background: rgba(255, 255, 255, 0.938); max-width: 300px;"> 
+  <div id="pop" class="sliIn box-shadow border-radius-8px" style=" width: 80vw; padding: 0.9rem; background: rgba(255, 255, 255, 0.938); max-width: 300px;"> 
     <img src="assets/images/loan2.jpg" class="w-100 " style="border-radius: 8px; height: 100px; max-height: 60vw; object-fit: cover; margin-bottom: 0!important;
 " alt="">    <h3 class="fw-700 text-dark-gray  " style="margin-bottom: 0px; font-size: 20px;">lorem ipsum</h3>
 

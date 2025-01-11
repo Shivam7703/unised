@@ -1,30 +1,49 @@
 
-// Remove the preloader after the page loads
-var pop = document.getElementById("pop");
-var pop2 = document.getElementById("pop2");
-var pop3 = document.getElementById("pop3");
-
+const pop = document.getElementById("pop");
+const pop2 = document.getElementById("pop2");
+const pop3 = document.getElementById("pop3");
 
 window.addEventListener("load", function () {
-    setTimeout(function () {
-      document.body.classList.add("loaded");
-    }, 900); 
+	
+
+	// Add the loaded class to the body after 900ms
+	setTimeout(function () {
+		document.body.classList.add("loaded");
+	}, 900);
+
+	// Sequence the animations
+	setTimeout(function () {
+		hid(pop);
+		show(pop2);
+	}, 10000);
 
 	setTimeout(function () {
-		pop.style.display = "none";
-		pop2.classList.remove("hidden");
-	  }, 10000); 
+		hid(pop2);
+		show(pop3);
+	}, 20000);
 
-	  setTimeout(function () {
-		pop2.classList.add("hidden");
-		pop3.classList.remove("hidden");
-	  }, 20000); 
+	setTimeout(function () {
+		
+		hid(pop3);
+	}, 30000);
+});
 
-	  setTimeout(function () {
-		pop3.classList.add("hidden");
-	  }, 30000); 
-  });
 
+
+function hid(element) {
+	element.classList.remove("sliIn");
+	element.classList.add("sliOut");
+	setTimeout(function () {
+		element.classList.add("hidden");
+	}, 2000);
+}
+
+function show(element) {
+	element.classList.add("sliIn");
+	setTimeout(function () {
+		element.classList.remove("hidden");
+	}, 2000);
+}
 
 
 (function ($) {
@@ -3007,34 +3026,34 @@ window.addEventListener("load", function () {
 
 	document.querySelectorAll('.menu-anim > li > a').forEach(button => button.innerHTML = '<div class="menu-text"><span>' + button.textContent.split('').join('</span><span>') + '</span></div>');
 
-  setTimeout(() => {
-    var menu_text = document.querySelectorAll(".menu-text span")
-    menu_text.forEach((item) => {
-      var font_sizes = window.getComputedStyle(item, null);
-      let font_size = font_sizes.getPropertyValue("font-size");
-      let size_in_number = parseInt(font_size.replace("px", ""));
-      let new_size = parseInt(size_in_number / 3)
-      new_size = new_size + "px"
-      if (item.innerHTML == " ") {
-        item.style.width = new_size
-      }
-    })
-  }, 1000)
+	setTimeout(() => {
+		var menu_text = document.querySelectorAll(".menu-text span")
+		menu_text.forEach((item) => {
+			var font_sizes = window.getComputedStyle(item, null);
+			let font_size = font_sizes.getPropertyValue("font-size");
+			let size_in_number = parseInt(font_size.replace("px", ""));
+			let new_size = parseInt(size_in_number / 3)
+			new_size = new_size + "px"
+			if (item.innerHTML == " ") {
+				item.style.width = new_size
+			}
+		})
+	}, 1000)
 
 
 
 
 
-	$(document).ready(function(){
-		$('.about_menu_link').click(function(){
+	$(document).ready(function () {
+		$('.about_menu_link').click(function () {
 			$('.trans_div1').removeClass('conent_active1');
 			$('.trans_div2').removeClass('conent_active2');
 			$(".about_menu_link").removeClass("active_link")
 			$(this).siblings('.hover_about_menu_content').find('.trans_div1').addClass('conent_active1');
-        $(this).siblings('.hover_about_menu_content').find('.trans_div2').addClass('conent_active2');
-        $(this).addClass("active_link")
+			$(this).siblings('.hover_about_menu_content').find('.trans_div2').addClass('conent_active2');
+			$(this).addClass("active_link")
 		});
-		$('.program_link2').click(function(){
+		$('.program_link2').click(function () {
 			$('.program_card1').removeClass('program_card_active');
 			$('.program_card3').removeClass('program_card_active');
 			$('.program_card4').removeClass('program_card_active');
@@ -3043,7 +3062,7 @@ window.addEventListener("load", function () {
 			$('.program_card7').removeClass('program_card_active');
 			$('.program_card2').addClass('program_card_active');
 		});
-		$('.program_link1').click(function(){
+		$('.program_link1').click(function () {
 			$('.program_card2').removeClass('program_card_active');
 			$('.program_card3').removeClass('program_card_active');
 			$('.program_card4').removeClass('program_card_active');
@@ -3052,7 +3071,7 @@ window.addEventListener("load", function () {
 			$('.program_card7').removeClass('program_card_active');
 			$('.program_card1').addClass('program_card_active');
 		});
-		$('.program_link3').click(function(){
+		$('.program_link3').click(function () {
 			$('.program_card2').removeClass('program_card_active');
 			$('.program_card1').removeClass('program_card_active');
 			$('.program_card4').removeClass('program_card_active');
@@ -3061,7 +3080,7 @@ window.addEventListener("load", function () {
 			$('.program_card7').removeClass('program_card_active');
 			$('.program_card3').addClass('program_card_active');
 		});
-		$('.program_link4').click(function(){
+		$('.program_link4').click(function () {
 			$('.program_card2').removeClass('program_card_active');
 			$('.program_card1').removeClass('program_card_active');
 			$('.program_card3').removeClass('program_card_active');
@@ -3070,7 +3089,7 @@ window.addEventListener("load", function () {
 			$('.program_card7').removeClass('program_card_active');
 			$('.program_card4').addClass('program_card_active');
 		});
-		$('.program_link5').click(function(){
+		$('.program_link5').click(function () {
 			$('.program_card2').removeClass('program_card_active');
 			$('.program_card1').removeClass('program_card_active');
 			$('.program_card3').removeClass('program_card_active');
@@ -3079,7 +3098,7 @@ window.addEventListener("load", function () {
 			$('.program_card7').removeClass('program_card_active');
 			$('.program_card5').addClass('program_card_active');
 		});
-		$('.program_link6').click(function(){
+		$('.program_link6').click(function () {
 			$('.program_card2').removeClass('program_card_active');
 			$('.program_card1').removeClass('program_card_active');
 			$('.program_card3').removeClass('program_card_active');
@@ -3088,7 +3107,7 @@ window.addEventListener("load", function () {
 			$('.program_card7').removeClass('program_card_active');
 			$('.program_card6').addClass('program_card_active');
 		});
-		$('.program_link7').click(function(){
+		$('.program_link7').click(function () {
 			$('.program_card2').removeClass('program_card_active');
 			$('.program_card1').removeClass('program_card_active');
 			$('.program_card3').removeClass('program_card_active');
@@ -3098,104 +3117,104 @@ window.addEventListener("load", function () {
 			$('.program_card7').addClass('program_card_active');
 		});
 	});
-	
+
 	// navbar-expand-lg
-	$(window).scroll(function() {
+	$(window).scroll(function () {
 		var scrollPos = $(window).scrollTop(),
 			navbar = $('.navbar-expand-lg');
-	
+
 		if (scrollPos > 150) {
-		  navbar.addClass('navScroll');
+			navbar.addClass('navScroll');
 		} else {
-		  navbar.removeClass('navScroll');
+			navbar.removeClass('navScroll');
 		}
-	  });
-
-	  
-
-  const sliderOptions = {
-	slidesPerView: 1,
-	spaceBetween: 0,
-	speed: 1000,
-	loop: true,
-	autoplay:true,
-
-  };
-  
-  const slider = new Swiper('.banner_swiper_slider', sliderOptions);
-
-  const timeline = document.querySelector('.timeline');
-  const timelineContainers = document.querySelectorAll('.timeline-container');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        timeline.classList.add('show-line');
-        timeline.classList.remove('hide-line');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.8
-  });
-
-  timelineContainers.forEach(container => {
-    observer.observe(container);
-  });
-
-  window.addEventListener('scroll', () => {
-    const timelineRect = timeline.getBoundingClientRect();
-    const top = timelineRect.top;
-    const bottom = timelineRect.bottom;
-
-    if (top > window.innerHeight / 2 || bottom < window.innerHeight / 2) {
-      timeline.classList.remove('show-line');
-      timeline.classList.add('hide-line');
-    } else {
-      timeline.classList.add('show-line');
-      timeline.classList.remove('hide-line');
-    }
-  });
+	});
 
 
-  var swiper = new Swiper('.blog-slider', {
-	spaceBetween: 30,
-	effect: 'fade',
-	autoplay:true,
-	loop: true,
-	// mousewheel: {
-	//   invert: false,
-	// },
-	// autoHeight: true,
-	pagination: {
-	  el: '.blog-slider__pagination',
-	  clickable: true,
-	}
-  });
+
+	const sliderOptions = {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 1000,
+		loop: true,
+		autoplay: true,
+
+	};
+
+	const slider = new Swiper('.banner_swiper_slider', sliderOptions);
+
+	const timeline = document.querySelector('.timeline');
+	const timelineContainers = document.querySelectorAll('.timeline-container');
+
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('show');
+				timeline.classList.add('show-line');
+				timeline.classList.remove('hide-line');
+				observer.unobserve(entry.target);
+			}
+		});
+	}, {
+		threshold: 0.8
+	});
+
+	timelineContainers.forEach(container => {
+		observer.observe(container);
+	});
+
+	window.addEventListener('scroll', () => {
+		const timelineRect = timeline.getBoundingClientRect();
+		const top = timelineRect.top;
+		const bottom = timelineRect.bottom;
+
+		if (top > window.innerHeight / 2 || bottom < window.innerHeight / 2) {
+			timeline.classList.remove('show-line');
+			timeline.classList.add('hide-line');
+		} else {
+			timeline.classList.add('show-line');
+			timeline.classList.remove('hide-line');
+		}
+	});
+
+
+	var swiper = new Swiper('.blog-slider', {
+		spaceBetween: 30,
+		effect: 'fade',
+		autoplay: true,
+		loop: true,
+		// mousewheel: {
+		//   invert: false,
+		// },
+		// autoHeight: true,
+		pagination: {
+			el: '.blog-slider__pagination',
+			clickable: true,
+		}
+	});
 
 })(jQuery);
 
 function initFAQ() {
-    const questions = document.querySelectorAll('.question');
-    
-    questions.forEach(question => {
-        question.addEventListener('click', () => {
+	const questions = document.querySelectorAll('.question');
+
+	questions.forEach(question => {
+		question.addEventListener('click', () => {
 			console.log("wrking");
-            // If clicking on an already active item, remove the active class
-            if (question.parentNode.classList.contains('active')) {
-                question.parentNode.classList.remove('active');
-            } else {
-                // Remove 'active' class from all question parents first
-                questions.forEach(q => {
-                    q.parentNode.classList.remove('active');
-                });
-                
-                // Add 'active' class to the clicked question's parent
-                question.parentNode.classList.add('active');
-            }
-        });
-    });
+			// If clicking on an already active item, remove the active class
+			if (question.parentNode.classList.contains('active')) {
+				question.parentNode.classList.remove('active');
+			} else {
+				// Remove 'active' class from all question parents first
+				questions.forEach(q => {
+					q.parentNode.classList.remove('active');
+				});
+
+				// Add 'active' class to the clicked question's parent
+				question.parentNode.classList.add('active');
+			}
+		});
+	});
 }
 
 // Arrays for years and milestones
@@ -3204,18 +3223,18 @@ const milestones = Array.from(document.querySelectorAll('[id^="mile"]')); // Con
 
 // Function to update visibility and active classes
 function updateMilestone(index) {
-  // Hide all milestones and remove active class from years
-  milestones.forEach((milestone) => milestone.classList.add('hidden'));
-  years.forEach((year) => year.classList.remove('active'));
+	// Hide all milestones and remove active class from years
+	milestones.forEach((milestone) => milestone.classList.add('hidden'));
+	years.forEach((year) => year.classList.remove('active'));
 
-  // Show the selected milestone and highlight the clicked year
-  milestones[index].classList.remove('hidden');
-  years[index].classList.add('active');
+	// Show the selected milestone and highlight the clicked year
+	milestones[index].classList.remove('hidden');
+	years[index].classList.add('active');
 }
 
 // Add event listeners to years
 years.forEach((year, index) => {
-  year.addEventListener('click', () => updateMilestone(index));
+	year.addEventListener('click', () => updateMilestone(index));
 });
 
 
@@ -3225,16 +3244,16 @@ const programs = Array.from(document.querySelectorAll('[id^="program"]')); // Co
 
 // Function to update visibility and active classes
 function updateProgram(index) {
-  // Hide all milestones and remove active class from years
-  programs.forEach((program) => program.classList.add('hidden'));
+	// Hide all milestones and remove active class from years
+	programs.forEach((program) => program.classList.add('hidden'));
 
-  // Show the selected milestone and highlight the clicked year
-  programs[index].classList.remove('hidden');
+	// Show the selected milestone and highlight the clicked year
+	programs[index].classList.remove('hidden');
 }
 
 // Add event listeners to years
 states.forEach((state, index) => {
-  state.addEventListener('click', () => updateProgram(index));
+	state.addEventListener('click', () => updateProgram(index));
 });
 
 
