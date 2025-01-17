@@ -5816,3 +5816,9 @@ a:hover{ text-decoration: none; }
 	margin-top: 10px;
     margin-bottom: 20px;
 }
+
+.bg-wrld{
+	background:linear-gradient(0deg , rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.731)), url(/assets/images/wrld.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
